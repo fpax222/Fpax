@@ -96,6 +96,8 @@ git stash pop
 1. https://www.codecademy.com - Interactive programming courses, some free and others paid. It features small modular courses to solve particular problems and a built-in code editor that gives you feedback on solutions. 
 1. https://python.swaroopch.com - "A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience.
 1. https://realpython.com - Tutorials and various Python-related subjects covered in depth.
+1. https://docs.python-guide.org - Best practice handbook for the installation, configuration, and usage of Python on a daily basis.
+1. https://github.com/satwikkansal/wtfpython - Surprising snippets in Python.
 1. https://www.pythonanywhere.com - Online Python IDE. Allows you to write and execute code on any machine with a browser.
 1. Contribute to an open source project. Find a project that you love and use. Some projects have a contributing guide (e.g. [Django](https://docs.djangoproject.com/en/dev/internals/contributing/)), for the other you can simply go to their GirHub page and search for unassigned issues. The other contributors will be happy to help you understand the requirements, review your code and guide you towards a solution. 
 
