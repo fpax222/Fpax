@@ -17,6 +17,24 @@ name = "ana"
 age = 20
 balance = 128.5562
 
+# str.format()
+text = "{}'s account has a balance of {:.2f}$.".format(name.capitalize(), balance)
+print('str.format:', text)
+
+text = "{0}'s account has a balance of {1:.2f}$. {2}, I am {0}!".format(
+    name.capitalize(), balance, greeting.capitalize())
+print('str.format:', text)
+
+text = "{name}'s account has a balance of {balance:.2f}$. {greeting}, "\
+       "I am {name}! {lalala}".format(
+            name=name.capitalize(),
+            balance=balance,
+            greeting=greeting.capitalize(),
+            lalala="ceva",
+       )
+print('str.format:', text)
+
+# F-strings
 text = f"{name.capitalize()} says '{greeting.title()}!'"
 print(text)
 
