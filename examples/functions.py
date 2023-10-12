@@ -39,6 +39,7 @@ if __name__ == "__main__":
     greet("Anna")
     greet("Jane", "hello")
     greet(greeting="bună dimineața", name="Miruna")
+    greet("Jane", greeting="hello")
 
     # name_and_greeting = ["Jane", "hello"]
     # greet(*name_and_greeting)
