@@ -20,8 +20,6 @@ if __name__ == "__main__":
             print(f"Could not parse {email} because of {ex} ({type(ex)})")
         except NameError as ex:
             print(ex)
-        except Exception:
-            print("Any exception!")
         else:
             print(f"Successfully parsed {email}")
         finally:
