@@ -11,6 +11,7 @@ class Person:
         self.name = pname  # instance attribute
         self.date_of_birth = dob
         self._increment_count()
+        # Person.count += 1
 
     @property
     def date_of_birth(self):  # getter
@@ -43,7 +44,7 @@ class Person:
         return self.date_of_birth > other.date_of_birth
 
     def __str__(self):
-        return f"Person object (name={self.name})"
+        return f"{self.__class__.__name__} object (name={self.name})"
 
     @classmethod
     def _increment_count(cls):
@@ -53,6 +54,21 @@ class Person:
     def compute_age(date_obj):
         diff = date.today() - date_obj
         return int(diff.days / 365.25)
+
+
+class Student(Person):
+    count = 0
+
+    def __init__(self, name, date_of_birth, university):
+        super().__init__(name, date_of_birth)
+        self.university = university
+
+    def greet(self, greeting="hello"):
+        print(f"{greeting.capitalize()}! I am {self.name} and I study at {self.university}.")
+
+    def __str__(self):
+        super_str = super().__str__()
+        return super_str[:-1] + f" univ={self.university}" + super_str[-1]
 
 
 if __name__ == "__main__":
@@ -104,3 +120,10 @@ if __name__ == "__main__":
     # print(p1.date_of_birth)
 
     print(f"{p1.name} is {p1.age} years old.")
+
+    s1 = Student("Ion Marinescu", date(2001, 8, 2), "CSIE")
+    s1.greet()
+    print(str(s1))
+
+    print("Person count:", Person.count)
+    print("Student count:", Student.count)
